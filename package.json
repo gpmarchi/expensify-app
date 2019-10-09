@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --watch",
     "serve": "live-server public",
     "build": "webpack",
     "dev-server": "webpack-dev-server"
@@ -39,11 +39,13 @@
     "@babel/core": "^7.6.2",
     "@babel/preset-env": "^7.6.2",
     "@babel/preset-react": "^7.0.0",
+    "@types/jest": "^24.0.18",
     "babel-loader": "^8.0.6",
     "babel-plugin-transform-class-properties": "^6.24.1",
     "css-loader": "^3.2.0",
     "eslint": "^6.4.0",
     "eslint-plugin-react": "^7.15.1",
+    "jest": "^24.9.0",
     "live-server": "^1.2.1",
     "node-sass": "^4.12.0",
     "sass-loader": "^8.0.0",
