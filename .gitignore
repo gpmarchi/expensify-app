@@ -62,3 +62,9 @@ typings/
 
 # misc
 .DS_STORE
+
+#webpack generated assets
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
