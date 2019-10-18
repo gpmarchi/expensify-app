@@ -18,25 +18,17 @@ test("Should render ExpensesSummary with 0 expenses correctly", () => {
 });
 
 test("Should render ExpensesSummary with 1 expense correctly", () => {
-  const expenseCount = 1;
-  const expensesTotal = numeral(expenses[0].amount / 100).format("$0,0.00");
   const wrapper = shallow(
-    <ExpensesSummary
-      expenseCount={expenseCount}
-      expensesTotal={expensesTotal}
-    />
+    <ExpensesSummary expenseCount={1} expensesTotal={expenses[0].amount} />
   );
   expect(wrapper).toMatchSnapshot();
 });
 
 test("Should render ExpensesSummary with multiple expenses correctly", () => {
-  const expenseCount = expenses.length;
-  const expensesTotal = numeral(selectExpensesTotal(expenses) / 100).format(
-    "$0,0.00"
-  );
+  const expensesTotal = selectExpensesTotal(expenses);
   const wrapper = shallow(
     <ExpensesSummary
-      expenseCount={expenseCount}
+      expenseCount={expenses.length}
       expensesTotal={expensesTotal}
     />
   );
