@@ -14,38 +14,36 @@ firebase.initializeApp(firebaseConfig);
 
 const database = firebase.database();
 
-database
-  .ref()
-  .set({
-    name: "Gustavo Marchi",
-    age: 38,
-    isSingle: true,
-    location: {
-      city: "São Paulo",
-      country: "Brasil"
-    }
-  })
-  .then(() => {
-    console.log("Data saved!");
-  })
-  .catch(error => {
-    console.log(error);
-  });
+export { firebase, database as default };
 
-// database.ref().set("This is my data.");
+// database.ref("expenses").on("child_removed", snapshot => {
+//   console.log(snapshot.key, snapshot.val());
+// });
 
-// database.ref("age").set(39);
-// database.ref("location/city").set("Rio de Janeiro");
+// database.ref("expenses").on("child_changed", snapshot => {
+//   console.log(snapshot.key, snapshot.val());
+// });
 
-database
-  .ref("attributes")
-  .set({
-    height: "1.90 m",
-    weight: "500 kg"
-  })
-  .then(() => {
-    console.log("Data saved!");
-  })
-  .catch(error => {
-    console.log(error);
-  });
+// database.ref("expenses").on("child_added", snapshot => {
+//   console.log(snapshot.key, snapshot.val());
+// });
+
+// // database.ref("expenses").on("value", snapshot => {
+// //   const expenses = [];
+
+// //   snapshot.forEach(childSnapshot => {
+// //     expenses.push({
+// //       id: childSnapshot.key,
+// //       ...childSnapshot.val()
+// //     });
+// //   });
+
+// //   console.log(expenses);
+// // });
+
+// database.ref("expenses").push({
+//   description: "Something else",
+//   note: "Some other expenses",
+//   amount: 12398204832,
+//   createdAt: 500000002093482039
+// });
