@@ -2,7 +2,11 @@
     "env": {
         "browser": true,
         "es6": true,
-        "node": true
+        "node": true,
+        "jest": true
+    },
+    "settings": {
+        "version": "detect"
     },
     "extends": [
         "eslint:recommended",
@@ -22,5 +26,12 @@
     "plugins": [
         "react"
     ],
-    "rules": {}
+    "rules": {
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+        "react/jsx-equals-spacing": [
+            2,
+            "always"
+        ]
+    }
 }
